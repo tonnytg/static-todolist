@@ -1,6 +1,7 @@
 var listElement = document.querySelector('#app ul');
 var inputElement = document.querySelector('#app input');
 var buttonElement = document.querySelector('#app button');
+var clearElement = document.getElementById('limpar');
 
 var todos = JSON.parse(localStorage.getItem('list_todos')) || [];
 
@@ -42,6 +43,12 @@ function saveToStorage () {
     localStorage.setItem('list_todos', JSON.stringify(todos));
 }
 
+function clearToStorage () {
+    localStorage.clear('list_todos');
+    renderTodos();
+    location.reload();
+}
+
 function addTodo() {
     var todoText = inputElement.value;
 
@@ -51,6 +58,7 @@ function addTodo() {
     saveToStorage();
 }
 buttonElement.onclick = addTodo;
+clearElement.onclick = clearToStorage;
 
 function deleteTodo(pos) {
     todos.splice(pos, 1);
