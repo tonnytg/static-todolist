@@ -9,20 +9,30 @@ function renderTodos() {
     listElement.innerHTML = '';
 
     for (todo of todos) {
-        console.log(todo);
         var todoElement = document.createElement('li');
-        var todoText = document.createTextNode(todo);
+        var icone = document.createElement('br');
 
-        var pos = todos.indexOf(todo);
+
+        // Icone Lixeira
+        var linkTrash = document.createElement('i');
         var linkElement = document.createElement('a');
         linkElement.setAttribute('href', '#');
         linkElement.setAttribute('onclick', 'deleteTodo('+ pos +')');
-        var linkText = document.createTextNode('Excluir');
-        linkElement.appendChild(linkText);
+        linkTrash.setAttribute("class", "fa fa-trash");
+        todoElement.setAttribute("class", "list-group-item");
+        //var linkTrash = document.createTextNode('Excluir');
+        linkElement.appendChild(linkTrash);
+
+        // Valor da Lista
+        var todoText = document.createTextNode(todo);
+
+        // Posição do conteúdo
+        var pos = todos.indexOf(todo);
 
         // Corpo da lista
-        todoElement.appendChild(todoText);
         todoElement.appendChild(linkElement);
+        todoElement.appendChild(todoText);
+        
         listElement.appendChild(todoElement);
 
     }
