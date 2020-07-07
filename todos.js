@@ -11,12 +11,12 @@ function renderTodos() {
 
     for (todo of todos) {
         var todoElement = document.createElement('li');
-        var icone = document.createElement('br');
-
 
         // Icone Lixeira
         var linkTrash = document.createElement('i');
         var linkElement = document.createElement('a');
+        var pos = todos.indexOf(todo);
+
         linkElement.setAttribute('href', '#');
         linkElement.setAttribute('onclick', 'deleteTodo('+ pos +')');
         linkTrash.setAttribute("class", "fa fa-trash");
@@ -27,15 +27,10 @@ function renderTodos() {
         // Valor da Lista
         var todoText = document.createTextNode(todo);
 
-        // Posição do conteúdo
-        var pos = todos.indexOf(todo);
-
         // Corpo da lista
         todoElement.appendChild(linkElement);
         todoElement.appendChild(todoText);
-        
         listElement.appendChild(todoElement);
-
     }
 }
 
