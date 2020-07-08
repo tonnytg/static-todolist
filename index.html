@@ -1,9 +1,12 @@
 <html>
     <head>
-        
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <script data-ad-client="ca-pub-5269862392440881" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+
         <title>
             Minhas Tarefas do dia
         </title>
@@ -14,14 +17,21 @@
                 width: 50%;
                 height: 50%;
             }
-            .btn btn-primary {
-                width: 50%;
-                height: 50%;
-            }
-            .input {
-                width: 50%;
-                height: 50%;
-            }
+            .left, .right {
+                float: left;
+                width: 20%; /* The width is 20%, by default */
+                }
+                .main {
+                    float: left;
+                    width: 60%; /* The width is 60%, by default */
+                }
+
+                /* Use a media query to add a breakpoint at 800px: */
+                    @media screen and (max-width: 800px) {
+                    .left, .main, .right {
+                        width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
+                    }
+                }
             </style>
     </head>
     <body>
@@ -50,7 +60,7 @@
                 <button class="btn btn-danger" id="limpar">Limpar</button>
                 <br/>
                 <br/>
-                by <a href="https://linkedin.com/in/thomacelli">Thomacelli</a>
+                by <a href="https://linkedin.com/in/thomacelli">Antonio Thomacelli</a>
             </div>
         </div>
         <script src="todos.js"> </script>
