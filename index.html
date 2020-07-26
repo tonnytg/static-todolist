@@ -1,68 +1,92 @@
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <script data-ad-client="ca-pub-5269862392440881" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="utf-8">
+  <title>Lista de Tarefas</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="lista,todo,tarefas,lista de tarefas" name="keywords">
+  <meta content="Produtividade se melhora com uma lista, então faça a tarefa do dia" name="description">
 
+  <!-- Favicons -->
+  <link href="img/favicon.png" rel="icon">
+  <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,500,600,700,700i|Montserrat:300,400,500,600,700" rel="stylesheet">
+  <!-- Bootstrap CSS File -->
+  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Libraries CSS Files -->
+  <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <!-- Main Stylesheet File -->
+  <link href="css/style.css" rel="stylesheet">
+</head>
 
-        <title>
-            Minhas Tarefas do dia
-        </title>
-
-        <style>
-            html {font-family: "Lucida Sans", sans-serif;}
-            .container {
-                width: 90%;
-                height: 90%;
-            }
-            .left, .right {
-                float: left;
-                width: 20%; /* The width is 20%, by default */
-                }
-                .main {
-                    float: left;
-                    width: 60%; /* The width is 60%, by default */
-                }
-
-                /* Use a media query to add a breakpoint at 800px: */
-                    @media screen and (max-width: 800px) {
-                    .left, .main, .right {
-                        width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
-                    }
-                }
-            </style>
-    </head>
-    <body>
-        <div class="container">
-            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-            <!-- 4x4banner -->
-            <ins class="adsbygoogle"
-                style="display:block"
-                data-ad-client="ca-pub-5269862392440881"
-                data-ad-slot="8997604842"
-                data-ad-format="auto"
-                data-full-width-responsive="true"></ins>
-            <script>
-                (adsbygoogle = window.adsbygoogle || []).push({});
-            </script>
-            <div id="app">
-                <ul class="list-group"></ul>
-                <br />
-                <div class="input-group mb-3">
-                    <div class="input-group-prepend">
-                      <span class="input-group-text" id="inputGroup-sizing-default">Tarefa</span>
-                    </div>
-                    <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Digite algo">
-                  </div>
-                <button class="btn btn-primary" id="addicionar">Adicionar</button>
-                <button class="btn btn-danger" id="limpar">Limpar</button>
-                <br/>
-                <br/>
-                by <a href="https://linkedin.com/in/thomacelli">Antonio Thomacelli</a>
-            </div>
+<body>
+  <header id="header">
+    <div id="topbar">
+      <div class="container">
+        <div class="social-links">
+          <a href="https://twitter.com/tonnytg" class="twitter"><i class="fa fa-twitter"></i></a>
+          <a href="https://www.linkedin.com/in/thomacelli" class="linkedin"><i class="fa fa-linkedin"></i></a>
+          <a href="https://www.instagram.com/lideratech/" class="instagram"><i class="fa fa-instagram"></i></a>
         </div>
-        <script src="todos.js"> </script>
-    </body>
+      </div>
+    </div>
+
+    <div class="container">
+      <nav class="main-nav float-right d-none d-lg-block">
+        <ul>
+          <li class="active"><a href="#intro">Inicio</a></li>
+          <li><a href="#about">Sobre</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section id="intro" class="clearfix">
+    <div class="container d-flex h-100">
+      <div class="row justify-content-center align-self-center">
+        <div class="col-md-6 intro-info order-md-first order-last">
+          <h2>Tarefa do Dia</h2>
+          <div id="app">
+            <ul class="list-group"></ul>
+            <br />
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="inputGroup-sizing-default">Tarefa</span>
+                </div>
+                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Digite algo">
+              </div>
+            <button class="btn btn-primary" id="addicionar">Adicionar</button>
+            <button class="btn btn-danger" id="limpar">Limpar</button>
+            <br/>
+            <br/>
+            by <a href="https://linkedin.com/in/thomacelli">Antonio Thomacelli</a>
+        </div>
+        </div>
+  
+        <div class="col-md-6 intro-img order-md-last order-first">
+          <img src="img/intro-img.svg" alt="" class="img-fluid">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+
+  <!-- JavaScript Libraries -->
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="lib/jquery/jquery-migrate.min.js"></script>
+  <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="lib/easing/easing.min.js"></script>
+  <script src="lib/mobile-nav/mobile-nav.js"></script>
+  <script src="lib/wow/wow.min.js"></script>
+  <script src="lib/waypoints/waypoints.min.js"></script>
+  <script src="lib/isotope/isotope.pkgd.min.js"></script>
+  <script src="lib/lightbox/js/lightbox.min.js"></script>
+
+  <!-- Template Main Javascript File -->
+  <script src="js/main.js"></script>
+  <script src="todos.js"> </script>
+
+</body>
 </html>
