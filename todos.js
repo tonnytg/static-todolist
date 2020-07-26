@@ -2,8 +2,14 @@ var listElement = document.querySelector('#app ul');
 var inputElement = document.querySelector('#app input');
 var buttonElement = document.querySelector('#app button');
 var clearElement = document.getElementById('limpar');
+var aboutElement = document.getElementById('sobre');
 
 var todos = JSON.parse(localStorage.getItem('list_todos')) || [];
+
+function SobreMim() {
+    alert("Olá, obrigado por visitar esse site se tiver mais interesse, me ache no Linkedin Antonio Thomacelli Gomes! ");
+    window.confirm("sometext");
+  }
 
 function renderTodos() {
 
