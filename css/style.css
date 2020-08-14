@@ -15,6 +15,14 @@ body {
   font-family: "Open Sans", sans-serif;
 }
 
+.list-scroll { 
+  padding:4px; 
+  width: 110%;
+  height: 300px; 
+  overflow-x: disable; 
+  overflow-y: auto; 
+} 
+
 a {
   color: #1bb1dc;
   transition: 0.5s;
@@ -1115,6 +1123,7 @@ h6 {
   padding: 6px;
   color: #413e66;
   font-weight: 300;
+  overflow-y: auto;
 }
 
 #pricing .card h3 {
@@ -1139,6 +1148,7 @@ h6 {
 
 #pricing .card .list-group {
   margin-bottom: 15px;
+  overflow-y: auto;
 }
 
 #pricing .card .btn {

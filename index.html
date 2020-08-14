@@ -2,10 +2,10 @@
 <html lang="pt">
 <head>
   <meta charset="utf-8">
-  <title>Lista de Tarefas</title>
+  <title>Tarefas do Dia!</title>
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <meta content="lista,todo,tarefas,lista de tarefas" name="keywords">
-  <meta content="Produtividade se melhora com uma lista, então faça a tarefa do dia" name="description">
+  <meta content="Produtividade se melhora com uma lista, então usufrua do tarefas do dia" name="description">
   <script data-ad-client="ca-pub-5269862392440881" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 
   <!-- Favicons -->
@@ -31,6 +31,15 @@
           <a href="https://www.instagram.com/lideratech/" class="instagram"><i class="fa fa-instagram"></i></a>
         </div>
       </div>
+
+      <nav class="main-nav float-right d-none d-lg-block">
+        <ul>
+          <li class="active"><a href="#faq">Como usar</a></li>
+          <li><a href="mailto:tonnytg@gmail.com">Anuncie aqui</a></li>
+          
+        </ul>
+      </nav><!-- .main-nav -->
+
     </div>
   </header>
 
@@ -39,8 +48,8 @@
       <div class="row justify-content-center align-self-center">
         <div class="col-md-6 intro-info order-md-first order-last">
           <h2>Tarefas do Dia</h2>
-          <div id="app">
-            <ul class="list-group"></ul>
+          <div class="app" id="app">
+            <ul class="list-scroll" id="list-scroll"></ul>
             <br />
             <div class="input-group mb-3">
                 <div class="input-group-prepend">
@@ -50,9 +59,6 @@
               </div>
             <button class="btn btn-primary" id="addicionar">Adicionar</button>
             <button class="btn btn-danger" id="limpar">Limpar</button>
-            <br/>
-            <br/>
-            
         </div>
         </div>
   
@@ -83,10 +89,79 @@
       </div>
     </div>
     <header class="section-header">
-      <p>A propaganda nos ajuda a continuar melhorando.<br/> by <a href="https://linkedin.com/in/thomacelli">Antonio Thomacelli</a></p>
+      <p>A propaganda nos ajuda a continuar melhorando.<br/>
+      Obrigado por nos ajudar! <i class="fa fa-heart"></i></p>
     </header>
     </div>
   </section>
+
+  <!--==========================
+      Frequently Asked Questions Section
+    ============================-->
+    <section id="faq">
+      <div class="container">
+        <header class="section-header">
+          <h3>Perguntas frequentes!</h3>
+          <p>Para ajuda a você evoluir, selecionamos algumas perguntas frequentes!</p>
+        </header>
+
+        <ul id="faq-list" class="wow fadeInUp">
+          <li>
+            <a data-toggle="collapse" class="collapsed" href="#faq1">Onde ficam esses dados da minha lista? <i class="fa fa-arrow"></i></a>
+            <div id="faq1" class="collapse" data-parent="#faq-list">
+              <p>
+                Uma ótima pergunta; Esse site foi criado para manter os dados na sua máquina, nenhuma das informação é exposta para a internet.<br />
+                Mas atenção, isso quer dizer que se você limpar o cache do navegador, sua lista será zerada.
+              </p>
+            </div>
+          </li>
+
+          <li>
+            <a data-toggle="collapse" href="#faq2" class="collapsed">Adicionei mais de 3 itens, o quarto não aparece! <i class="fa fa-arrow"></i></a>
+            <div id="faq2" class="collapse" data-parent="#faq-list">
+              <p>
+                Basta deixa o mouse em cima de um dos itens e usar o scroll do mouse para rolar para baixo,<br />
+                os itens ficam dentro de uma caixa com tamanho justo para não ocupar muito a tela.
+              </p>
+            </div>
+          </li>
+
+          <li>
+            <a data-toggle="collapse" href="#faq3" class="collapsed">Não consigo ser produtivo! <i class="fa fa-arrow"></i></a>
+            <div id="faq3" class="collapse" data-parent="#faq-list">
+              <p>
+                Infelizmente, isso é um fato para muitas pessoas, mas a solução é simples e barata,<br />
+                basta você ter disciplina para quebrar todas as tarefas em itens pequenos.<br />
+                
+                Por isso criamos esse site para ajudar você!<br />
+                Quer fritar um ovo? Não crie um projeto chamado fritar ovo, e sim em pequenas etapas.<br />
+                <ul>
+                  <li>Abrir a geladeira</li>
+                  <li>Pegar 2 ovos</li>
+                  <li>Quebrar ovos e colocar conteúdo na frigideirra</li>
+                  <li>acender o fogo</li>
+                  <li>...por ai vai</li>
+                </ul>
+                <br />
+                Cada pequena etapa concluída, será uma sensação de vitória.! Estamos torcendo por você :D<br />
+                Se quiser se mais efetivo, leia sobre <a href="https://pt.wikipedia.org/wiki/Técnica_pomodoro">Técnica de pomodoro!</a>
+              </p>
+            </div>
+          </li>
+
+          <li>
+            <a data-toggle="collapse" href="#faq2" class="collapsed">Tem limite de itens? <i class="fa fa-arrow"></i></a>
+            <div id="faq2" class="collapse" data-parent="#faq-list">
+              <p>
+                Como os dados são guardados no seu navegador, a resposta é não.
+              </p>
+            </div>
+          </li>
+
+        </ul>
+
+      </div>
+    </section><!-- #faq -->
 
   <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
 
