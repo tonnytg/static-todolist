@@ -17,9 +17,9 @@ body {
 
 .list-scroll { 
   padding:4px; 
-  width: 110%;
+  width: 100%;
   height: 300px; 
-  overflow-x: disable; 
+  overflow-x: auto; 
   overflow-y: auto; 
 } 
 
