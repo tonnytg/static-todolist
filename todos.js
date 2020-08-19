@@ -8,8 +8,6 @@ var aboutElement = document.getElementById('sobre');
 var todos = JSON.parse(localStorage.getItem('list_todos')) || [];
 var todones = JSON.parse(localStorage.getItem('list_todones')) || [];
 
-
-
 function renderTodos() {
     listElement.innerHTML = '';
 
@@ -83,3 +81,4 @@ function deleteTodo(pos) {
 }
 // Atualiza toda a lista
 renderTodos();
+console.log("Deu tudo certo, ocê pode descançar agora!")
